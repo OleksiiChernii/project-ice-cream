@@ -1,0 +1,273 @@
+.products {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__label {
+    margin-bottom: 15px;
+
+    font-family: 'Titan One';
+    font-size: 18px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--main-pink-text-color);
+
+    @media screen and (min-width: $tablet) {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 30px;
+      line-height: 1.13;
+    }
+  }
+
+  &__title {
+    margin-bottom: 148px;
+
+    font-family: 'Titan One';
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--accent-color);
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 158px;
+      font-size: 48px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 281px;
+      font-size: 58px;
+      line-height: 1.14;
+      letter-spacing: 0.06em;
+    }
+  }
+  &__list {
+    text-align: center;
+    --indent: 0px;
+    @media screen and (min-width: $tablet) {
+      --indent: 16px;
+    }
+    @media screen and (min-width: $desktop) {
+      --indent: 32px;
+    }
+  }
+  &__subtitle,
+  &__subtitle--back {
+    margin-bottom: 30px;
+
+    font-family: 'Titan One';
+    font-size: 20px;
+    line-height: 1.15;
+    text-transform: uppercase;
+    color: var(--white-color);
+
+    @media screen and (min-width: $desktop) {
+      font-size: 30px;
+      line-height: 1.13;
+    }
+  }
+  &__description,
+  &__desc {
+    margin-bottom: 32px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--white-color);
+    @media screen and (min-width: $tablet) {
+      line-height: 1.76;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 50px;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+  }
+  &__open,
+  &__close {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    display: block;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+  }
+  &__icon {
+    fill: var(--accent-color);
+  }
+  &__subtitle--back {
+    margin-bottom: 15px;
+  }
+  &__desc {
+    margin-bottom: 15px;
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      font-size: 13px;
+    }
+  }
+  &__front,
+  &__back {
+    position: absolute;
+    left: 0;
+    top: 33%;
+    padding-right: 39px;
+    padding-left: 41px;
+    backface-visibility: hidden;
+    transition: transform var(--anim-standart);
+    @media screen and (min-width: 768px) {
+      top: 20%;
+      padding-right: 35px;
+      padding-left: 35px;
+    }
+    @media screen and (min-width: 1200px) {
+      top: 30%;
+      padding-right: 63px;
+      padding-left: 60px;
+    }
+  }
+  &__back {
+    padding: 0 15px;
+    transform: rotateY(180deg);
+    @media screen and (min-width: 1200px) {
+      top: 25%;
+    }
+  }
+}
+.products__subtitle::after {
+  content: '';
+  display: block;
+  margin: 32px auto;
+  width: 26px;
+  border-bottom: 6px dotted var(--white-color);
+}
+.products__item {
+  position: relative;
+  height: 489px;
+  padding: 160px 39px 40px 41px;
+  border-radius: 24px;
+  --item: 1;
+  transition: box-shadow var(--anim-standart), transform var(--anim-standart);
+
+  @media screen and (max-width: 767px) {
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media screen and (min-width: $tablet) {
+    --item: 3;
+    height: 473px;
+    padding: 118px 32px 40px;
+  }
+  @media screen and (min-width: $desktop) {
+    height: 535px;
+    padding: 165px 63px 60px 64px;
+  }
+  &:hover {
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    transform: scale(1.1);
+  }
+  &:nth-child(1) {
+    background-color: var(--bg-hd-color);
+  }
+  &:nth-child(2) {
+    background-color: var(--bg-product-1-color);
+  }
+  &:nth-child(3) {
+    background-color: var(--bg-product-2-color);
+  }
+  @media screen and (max-width: 767px) {
+    &:not(:last-of-type) {
+      margin-bottom: 140px;
+    }
+  }
+  &::before {
+    content: '';
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    top: -29%;
+    left: 50%;
+    transform: translate(-50%);
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media screen and (min-width: $tablet) {
+      width: 224px;
+      height: 224px;
+      top: -28%;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 368px;
+      height: 394px;
+      top: -50%;
+    }
+  }
+  &:nth-child(1)::before {
+    background-image: url('../images/mobile/products-mb_1.png');
+
+    // Retina mobile
+    @include retinaScreen('../images/mobile/products-mb_1@2x.png');
+
+    @media screen and (min-width: $tablet) {
+      background-image: url('../images/tablet/products-tb_1.png');
+
+      // Retina tablet
+      @include retinaScreen('../images/tablet/products-tb_1@2x.png');
+    }
+
+    @media screen and (min-width: $desktop) {
+      background-image: url('../images/desktop/products-ds_1.png');
+
+      // Retina desktop
+      @include retinaScreen('../images/desktop/products-ds_1@2x.png');
+    }
+  }
+  &:nth-child(2)::before {
+    background-image: url('../images/mobile/products-mb_2.png');
+
+    // Retina mobile
+    @include retinaScreen('../images/mobile/products-mb_2@2x.png');
+
+    @media screen and (min-width: $tablet) {
+      background-image: url('../images/tablet/products-tb_2.png');
+
+      // Retina tablet
+      @include retinaScreen('../images/tablet/products-tb_2@2x.png');
+    }
+
+    @media screen and (min-width: $desktop) {
+      background-image: url('../images/desktop/products-ds_2.png');
+
+      // Retina desktop
+      @include retinaScreen('../images/desktop/products-ds_2@2x.png');
+    }
+  }
+  &:nth-child(3)::before {
+    background-image: url('../images/mobile/products-mb_3.png');
+    // Retina mobile
+    @include retinaScreen('../images/mobile/products-mb_3@2x.png');
+
+    @media screen and (min-width: $tablet) {
+      background-image: url('../images/tablet/products-tb_3.png');
+
+      // Retina tablet
+      @include retinaScreen('../images/tablet/products-tb_3@2x.png');
+    }
+
+    @media screen and (min-width: $desktop) {
+      background-image: url('../images/desktop/products-ds_3.png');
+
+      // Retina desktop
+      @include retinaScreen('../images/desktop/products-ds_3@2x.png');
+    }
+  }
+}
+
+.rotate {
+  transform: rotateY(180deg);
+}
+.is-rotate {
+  transform: rotateY(360deg);
+}

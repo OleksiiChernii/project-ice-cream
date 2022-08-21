@@ -1,0 +1,25 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'DM sans';
+    font-style: normal;
+    letter-spacing: 0.04em;
+    color: var(--main-black-text-color);
+    background-color: var(--bg-main-color);
+}
+
+.no-scroll{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}

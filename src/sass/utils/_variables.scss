@@ -1,0 +1,30 @@
+:root {
+
+    // text color
+    --main-black-text-color: #000000;
+    --main-grey-text-color: #907E82;
+    --main-pink-text-color: #ffa5ba;
+    --accent-color: #D41443;
+    --white-color: #FFFFFF;
+
+    // background color
+    --bg-hd-color: #FFB8CA;
+    --bg-ft-color: #FFF5F6;
+    --bg-mb-tb-menu-color: #E17992;
+    --bg-product-1-color: #F0D1A5;
+    --bg-product-2-color: #C2E297;
+    --bg-accent-color: #ECEBEB;
+    --bg-icon-cl: #D41443;
+    --bg-red-btn-cl: #ff0040;
+
+    // icon color
+    --icon-cl: #FEA5BB;
+    --icon-cl-2: #E1E1E1;
+
+    // transition
+    --anim-standart: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    // card-set
+    --item: 3;
+    --indent: 32px;
+}

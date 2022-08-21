@@ -1,0 +1,96 @@
+<section id="how" class="about section">
+  <div class="container">
+    <div class="about-container">
+      <p class="about-container__uppertitle">tradition and love</p>
+      <h2 class="about-container__title">how it’s made?</h2>
+    </div>
+    <div class="about-content">
+      <picture class="about-img">
+        <source
+          srcset="
+            ./images/desktop/about-ds_1.webp    1x,
+            ./images/desktop/about-ds_1@2x.webp 2x
+          "
+          media="(min-width: 1200px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/desktop/about-ds_1.png    1x,
+            ./images/desktop/about-ds_1@2x.png 2x
+          "
+          media="(min-width: 1200px)"
+          type="image/png"
+        />
+        <source
+          srcset="
+            ./images/tablet/about-tb.webp    1x,
+            ./images/tablet/about-tb@2x.webp 2x
+          "
+          media="(min-width: 768px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/tablet/about-tb.png    1x,
+            ./images/tablet/about-tb@2x.png 2x
+          "
+          media="(min-width: 768px)"
+          type="image/png"
+        />
+        <source
+          srcset="
+            ./images/mobile/about-mb_1.webp    1x,
+            ./images/mobile/about-mb_1@2x.webp 2x
+          "
+          media="(max-width: 767px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/mobile/about-mb_1.png    1x,
+            ./images/mobile/about-mb_1@2x.png 2x
+          "
+          media="(max-width: 767px)"
+          type="image/png"
+        />
+        <img
+          src="./images/desktop/about-ds_1.png"
+          alt="cow with milk"
+          loading="lazy"
+        />
+      </picture>
+
+      <div class="about-made__element">
+        <p class="about-made__element-uppertitle">
+          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
+          cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at
+          justo fringilla.
+        </p>
+
+        <p class="about-made__element-text">
+          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
+          Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
+          suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
+          tincidunt. <br /><br />Aliquam erat volutpat. Aenean accumsan.
+        </p>
+        <details class="about-made__more">
+          <summary
+            class="about-made__button"
+            data-open="Read less"
+            data-close="Read more"
+          >
+            <svg class="btn-icon" width="8" height="12">
+              <use href="./images/icons.svg#icon-more"></use>
+            </svg>
+          </summary>
+          <p class="about-made__element-more">
+            Curabitur lacinia enim at ex blandit, vel pellentesque odio
+            elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum
+            euismod nisl suscipit ligula volutpat, a feugiat urna maximus.
+          </p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
